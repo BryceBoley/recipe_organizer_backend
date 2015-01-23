@@ -17,6 +17,6 @@ class AddRecipe(generics.CreateAPIView):
     queryset = Recipe.objects.all()
 
 
-class IngredientList(generics.ListAPIView):
+class IngredientsList(generics.ListAPIView):
     serializer_class = IngredientSerializer
     queryset = Ingredient.objects.all()
