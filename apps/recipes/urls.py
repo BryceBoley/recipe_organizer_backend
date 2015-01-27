@@ -1,5 +1,7 @@
 from django.conf.urls import patterns, include, url
+from django.conf import settings
 from views import *
+
 urlpatterns = patterns(
     '',
 
@@ -8,4 +10,7 @@ urlpatterns = patterns(
     url(r'^add-recipe$', AddRecipe.as_view(), name='add-recipe'),
 
 	url(r'^ingredients/$', IngredientsList.as_view(), name='ingredients-list'),
+
+# Handling media files
+	url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
 )
