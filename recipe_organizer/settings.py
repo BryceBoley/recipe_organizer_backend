@@ -56,7 +56,7 @@ ROOT_URLCONF = 'recipe_organizer.urls'
 
 WSGI_APPLICATION = 'recipe_organizer.wsgi.application'
 
-MEDIA_ROOT = '/Users/simplymac/PycharmProjects/recipe_organizer/backend/apps/recipes/media'
+MEDIA_ROOT = '/Users/simplymac/recipe_project/recipe_organizer/backend/apps/recipes/media'
 
 MEDIA_URL = '/media/'
 # Database
