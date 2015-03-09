@@ -58,4 +58,4 @@ db.sqlite3
 .DS_Store
 *.orig
 /migrations
-/staticfiles
+/frontend/staticfiles
