@@ -1,5 +1,5 @@
-from django.conf.urls import patterns, include, url
-from django.conf import settings
+from django.conf.urls import patterns, url
+from recipe_organizer.settings import MEDIA_ROOT
 from views import *
 
 urlpatterns = patterns(
@@ -12,5 +12,5 @@ urlpatterns = patterns(
 
     url(r'^ingredients/$', IngredientsList.as_view(), name='ingredients-list'),
     # Handling media files
-    url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
+    url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
 )
