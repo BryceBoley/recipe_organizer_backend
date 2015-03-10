@@ -56,7 +56,7 @@ ROOT_URLCONF = 'recipe_organizer.urls'
 
 WSGI_APPLICATION = 'recipe_organizer.wsgi.application'
 
-MEDIA_ROOT = '/var/www/bryceboley.com/recipe_organizer/frontend/media'
+MEDIA_ROOT = '/var/www/bryceboley.com/recipe_organizer/backend/recipes/app/media'
 
 MEDIA_URL = '/media/'
 # Database
@@ -85,7 +85,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
-STATIC_ROOT = 'staticfiles'
+STATIC_ROOT = '/var/www/bryceboley.com/recipe_organizer/backend/staticfiles'
 STATIC_URL = '/static/'
 
 CORS_ORIGIN_WHITELIST = (
