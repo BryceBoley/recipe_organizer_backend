@@ -56,7 +56,7 @@ ROOT_URLCONF = 'recipe_organizer.urls'
 
 WSGI_APPLICATION = 'recipe_organizer.wsgi.application'
 
-MEDIA_ROOT = '/var/www/bryceboley.com/recipe_organizer/backend/recipes/app/media'
+MEDIA_ROOT = '/var/www/bryceboley.com/recipe_organizer/backend/apps/recipes/media'
 
 MEDIA_URL = '/media/'
 # Database
