@@ -91,7 +91,19 @@ STATIC_URL = '/static/'
 CORS_ORIGIN_WHITELIST = (
     'localhost:8000',
     'localhost/',
+    'bryceboley.com'
 )
 
 CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
+
+
+CORS_ALLOW_HEADERS = (
+'x-requested-with',
+'content-type',
+'accept',
+'origin',
+'authorization',
+'X-CSRFToken'
+)
 
