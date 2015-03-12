@@ -2,8 +2,6 @@ from rest_framework import generics
 from serializers import *
 
 
-
-
 class RecipeList(generics.ListCreateAPIView):
     serializer_class = RecipeSerializer
     queryset = Recipe.objects.all()
