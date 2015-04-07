@@ -26,7 +26,7 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
-APPEND_SLASH = False
+
 # Application definition
 
 INSTALLED_APPS = (
@@ -56,6 +56,7 @@ ROOT_URLCONF = 'recipe_organizer.urls'
 
 WSGI_APPLICATION = 'recipe_organizer.wsgi.application'
 
+# MEDIA_ROOT = '/Users/simplymac/recipe_project/recipe_organizer/backend/apps/recipes/media'
 MEDIA_ROOT = '/var/www/bryceboley.com/recipe_organizer/backend/apps/recipes/media'
 
 MEDIA_URL = '/media/'
@@ -99,11 +100,11 @@ CORS_ALLOW_CREDENTIALS = True
 
 
 CORS_ALLOW_HEADERS = (
-'x-requested-with',
-'content-type',
-'accept',
-'origin',
-'authorization',
-'X-CSRFToken'
+    'x-requested-with',
+    'content-type',
+    'accept',
+    'origin',
+    'authorization',
+    'X-CSRFToken'
 )
 
