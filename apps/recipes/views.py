@@ -12,7 +12,7 @@ class RecipeDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Recipe.objects.all()
 
 
-class AddRecipe(generics.CreateAPIView):
+class AddRecipe(generics.ListCreateAPIView):
     serializer_class = RecipeSerializer
     queryset = Recipe.objects.all()
 
