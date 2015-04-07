@@ -20,11 +20,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'gd-o3h-g_r#_*i^5gmm0wpn289933@5ac1fuej==71#bvg(ppc'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.bryceboley.com']
 
 
 # Application definition
@@ -42,7 +42,6 @@ INSTALLED_APPS = (
 )
 
 MIDDLEWARE_CLASSES = (
-    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -90,6 +89,7 @@ REST_FRAMEWORK = {
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 STATIC_ROOT = '/var/www/bryceboley.com/recipe_organizer/backend/staticfiles'
 STATIC_URL = '/static/'
+CSRF_COOKIE_DOMAIN = '.bryceboley.com'
 
 CORS_ORIGIN_WHITELIST = (
     'localhost:8000',
@@ -97,8 +97,24 @@ CORS_ORIGIN_WHITELIST = (
     'bryceboley.com'
 )
 
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = False
 CORS_ALLOW_CREDENTIALS = False
 
 
+CORS_ALLOW_HEADERS = (
+    'x-requested-with',
+    'content-type',
+    'accept',
+    'origin',
+    'authorization',
+    'x-csrftoken'
+    )
 
+CORS_ALLOW_METHODS = (
+    'GET',
+    'POST',
+    'PUT',
+    'PATCH',
+    'DELETE',
+    'OPTIONS'
+)
