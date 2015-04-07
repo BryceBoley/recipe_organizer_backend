@@ -20,8 +20,5 @@ class Recipe(models.Model):
     description = models.TextField(blank=True, null=True, help_text="This is a quick description of your recipe")
     directions = models.TextField(blank=True, null=True, help_text="How to make the recipe")
     ingredients = models.ManyToManyField(Ingredient, blank=True, null=True)
-    tags = models.ManyToManyField(Tag, blank=True, null=True)
-   # photo = models.ImageField(upload_to='photos', blank=True, null=True)
+    tags = models
 
-    def __str__(self):
-        return self.name
