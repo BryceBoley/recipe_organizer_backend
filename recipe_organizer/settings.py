@@ -22,7 +22,7 @@ SECRET_KEY = 'gd-o3h-g_r#_*i^5gmm0wpn289933@5ac1fuej==71#bvg(ppc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
 ALLOWED_HOSTS = ['.bryceboley.com']
 
@@ -82,9 +82,9 @@ USE_L10N = True
 
 USE_TZ = True
 
-REST_FRAMEWORK = {
-'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.AllowAny',),
-}
+
+DEFAULT_PERMISSION_CLASSES = 'rest_framework.permissions.AllowAny'
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 STATIC_ROOT = '/var/www/bryceboley.com/recipe_organizer/backend/staticfiles'
