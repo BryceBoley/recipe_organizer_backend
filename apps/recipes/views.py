@@ -20,3 +20,12 @@ class AddRecipe(generics.ListCreateAPIView):
 class IngredientsList(generics.ListAPIView):
     serializer_class = IngredientSerializer
     queryset = Ingredient.objects.all()
+
+
+def submit(request):
+    recipes = Recipe.objects.all().sort_by('name')
+    if request.method == "POST":
+        print request.POST['recipe']
+        print request.POST['ingredient']
+
+    return render(request, '/add-recipe.html', {})
