@@ -90,7 +90,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
-STATIC_ROOT = '/var/www/bryceboley.com/recipe_organizer/backend/static/'
+STATIC_ROOT = '/var/www/bryceboley.com/recipe_organizer/backend/staticfiles/'
 STATIC_URL = '/static/'
 CSRF_COOKIE_DOMAIN = 'recipes.bryceboley.com'
 CSRF_COOKIE_SECURE = True
