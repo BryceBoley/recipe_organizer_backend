@@ -28,4 +28,4 @@ def submit(request):
         print request.POST['recipe']
         print request.POST['ingredient']
 
-    return render(request, '/add-recipe.html', {})
+    return recipes.render(request, '/add-recipe.html', {})
