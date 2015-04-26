@@ -14,8 +14,8 @@ class TagSerializer(serializers.ModelSerializer):
 
 
 class RecipeSerializer(serializers.ModelSerializer):
-    ingredients = IngredientSerializer(many=True)
-    tags = TagSerializer(many=True)
+    ingredients = IngredientSerializer.Charfield(many=True)
+    tags = TagSerializer.Charfield(many=True)
 
     class Meta:
         model = Recipe
